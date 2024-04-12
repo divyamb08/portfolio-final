@@ -80,7 +80,7 @@ const HeroSection = () => {
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
           Student by Day, Hacker by Night.
           </p>
-          <div className="-mb-36 flex flex-col sm:flex-row" style={buttonStyle}>
+          <div className="-mb-36" style={buttonStyle}>
             <Link
               href="/#contact"
               className="px-6 py-3 w-full sm:w-fit bg-gradient-to-br rounded-full mr-4 bg-white hover:bg-slate-200 text-black"
