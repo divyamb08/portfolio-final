@@ -3,44 +3,18 @@ import React,  { useState, useEffect } from 'react'
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 function EmailSection() {
-    const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://smtpjs.com/v3/smtp.js";
-    script.onload = () => setScriptLoaded(true); // Set loaded state to true when script is loaded
-    document.body.appendChild(script);
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-  const handleSendEmail = (e) => {
-    e.preventDefault();
-    if (!scriptLoaded) {
-      alert('SMTPJS is not loaded yet. Please wait a moment and try again.');
-      return;
-    }
-    if (!email || !subject || !message) {
-        alert('Please fill all the fields.');
-        return;
-      }
-
-    window.Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "divyam.bansal2000@gmail.com",
-        Password: "8CC2CE93868B8118EBB15D7AB489B38391BA",
-        To: 'divyambansal2025@u.northwestern.edu',
-        From: email,
-        Subject: subject,
-        Body: message
-    }).then(
-      message => alert(message)
-    ).catch(error => {
-      console.error('Failed to send email:', error);
-      alert('Failed to send email. Please check console for more details.');
+  const handleSubmit = async (e) => {
+    const resend = new Resend('re_UGXmA58R_4XSu7iNxxgBAysMXLW5pZbPc');
+    resend.emails.send({
+      from: e.target.email.value,
+      to: 'divyam.bansal2000@gmail.com',
+      subject: e.target.subject.value,
+      message: e.target.message.value
     });
   };
     
@@ -61,7 +35,8 @@ function EmailSection() {
         
         </div>
         <div>
-            <form className='flex flex-col gap-4 text-black' onSubmit={handleSendEmail}>
+            <form className='flex flex-col gap-4 text-black' onSubmit={handleSubmit}>
+            <input type="hidden" name="access_key" value="657eb8b8-2c1b-4c3d-9b10-ff06b10fb5ec" />
                 
                 <label htmlFor="email" className='text-white px-1 mb-1/2'>Email</label>
                 <input type='email' id='email' required className="rounded-full px-3 max-w-96 border border-black" placeholder='tonystark@gmail.com'

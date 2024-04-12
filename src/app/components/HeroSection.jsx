@@ -85,7 +85,7 @@ const HeroSection = () => {
               href="/#contact"
               className="px-6 py-3 w-full sm:w-fit bg-gradient-to-br rounded-full mr-4 bg-white hover:bg-slate-200 text-black"
             >
-              Hire Me
+              Contact Me
             </Link>
             <Link
               href="https://drive.google.com/file/d/1ZBMvAREeeXlM7BwB07gP0e9bJUddfj-b/view?usp=sharing"
