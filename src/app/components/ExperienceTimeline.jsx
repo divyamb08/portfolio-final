@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ExperienceTimeline() {
   return (
-    <section className='flex flex-col h-auto sm:h-screen justify-center items-center py-10 sm:py-20 max-w-7xl mx-auto px-4 mb-20 lg:mb-32 lg:mt-32'>
+    <section className='flex flex-col h-auto sm:h-screen justify-center items-center py-10 sm:mt-36 sm:mb-36 max-w-7xl mx-auto px-4'>
     <div className='grid grid-cols-1 items-center'>
         <div><h1 className="text-center text-3xl sm:text-4xl font-bold text-white mt-4 mb-8 md:mb-12">Experience</h1></div>
 
