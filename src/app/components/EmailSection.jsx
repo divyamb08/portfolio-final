@@ -9,10 +9,10 @@ function EmailSection() {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
-    const resend = new Resend('re_UGXmA58R_4XSu7iNxxgBAysMXLW5pZbPc');
+    const resend = new Resend('');
     resend.emails.send({
       from: e.target.email.value,
-      to: 'divyam.bansal2000@gmail.com',
+      to: '',
       subject: e.target.subject.value,
       message: e.target.message.value
     });
