@@ -77,7 +77,7 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
           Hello! I&apos;m Divyam Bansal, a software developer and data scientist driven by my passion for unraveling the complexities of real-world challenges. My journey in tech has been fueled by curiosity and the desire to make impactful contributions. Working within dynamic teams, I&apos;ve found my true calling—leveraging collaborative strengths to innovate and solve problems at scale. My toolkit is a blend of coding prowess and analytical insight, enabling me to turn data into decisions and ideas into reality. Welcome to my portfolio, where each project is a testament to my dedication to excellence and my journey in making a difference.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-col sm:flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("sdeskills")}
               active={tab === "sdeskills"}
