@@ -45,7 +45,7 @@ function EmailSection() {
   };
     
   return (
-    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4'>
+    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4' id="contact">
         <div className=''>
             <h5 className='text-xl font-bold text-white my-2'>Let&apos;s Connect</h5>
             <p className='text-[#ADB7BE] mb-4 max-w-md'>I am currently looking for new opportunities. Whether you have a question or just want to have a coffee chat, my inbox is always open. </p>
