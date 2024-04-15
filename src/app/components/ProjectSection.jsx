@@ -40,7 +40,15 @@ const projectsData = [
       gitUrl: "https://github.com/divyamb08/Movie-Recommender",
       previewUrl: "https://recommendatio-196e861d9ef7.herokuapp.com/",
     },
-    
+    {
+      id: 5,
+      title: "Color Game",
+      description: "A simple RGB color game made with JS",
+      image: "/images/Projects/color-game.png",
+      tag: ["All", "Web"],
+      gitUrl: "https://github.com/divyamb08/color-game",
+      previewUrl: "https://divyamb08.github.io/color-game/",
+    }
   ];
 
   const ProjectsSection = () => {
