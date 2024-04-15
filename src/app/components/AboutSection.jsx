@@ -2,6 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import Link from "next/link";
 
 const TAB_DATA = [
   {
@@ -40,8 +41,12 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2 mb-10">
-        <li>Northwestern Univesity</li>
-        <li>Manipal Institute of Technology</li>
+        <li><strong>Northwestern Univesity</strong>
+          <p>Master of Science in Information Technology</p>
+        </li>
+        <li><strong>Manipal Institute of Technology</strong>
+          <p>Bachelor of Technology in Information Technology</p>
+        </li>
       </ul>
     ),
   },
@@ -50,9 +55,16 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2 mb-10">
-        <li>Microsoft Student Hackathon 2021</li>
-        <li>Meta React Native Specialization</li>
-        <li>The Web Developer Bootcamp</li>
+        <li>
+          <Link href="https://www.credly.com/badges/48b64617-b6e1-4d43-9575-915e33585bb7?source=linked_in_profile" target="_blank">Microsoft Student Hackathon 2021
+          </Link>
+          </li>
+        <li>
+          <Link href="https://coursera.org/share/6601023d7d7731699bd10039a542f2ca" target="_blank">Meta React Native Specialization
+        </Link>
+        </li>
+        <li><Link href="https://www.udemy.com/certificate/UC-cbb527d1-03f3-43de-87bc-4c714020207f/" target="_blank">The Web Developer Bootcamp</Link></li>
+        
       </ul>
     ),
   },

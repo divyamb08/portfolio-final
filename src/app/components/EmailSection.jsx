@@ -1,21 +1,52 @@
 "use client"
 import React,  { useState, useEffect } from 'react'
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { Resend } from 'resend';
 
 function EmailSection() {
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
-    const resend = new Resend('');
-    resend.emails.send({
+    // e.preventDefault();
+    // const data = {
+    //   email: e.target.email.value,
+    //   subject: e.target.subject.value,
+    //   message: e.target.message.value,
+    // };
+    // const JSONdata = JSON.stringify(data);
+    // const endpoint = "/api/send";
+
+    // // Form the request for sending data to the server.
+    // const options = {
+    //   // The method is POST because we are sending data.
+    //   method: "POST",
+    //   // Tell the server we're sending JSON.
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   // Body of the request is the JSON data we created above.
+    //   body: JSONdata,
+    // };
+    const resend = new Resend('re_6YW4eRiz_13HyLAQG6Jy9Lrz2matBHvg5');
+    const { data, error } = await resend.emails.send({
       from: e.target.email.value,
-      to: '',
+      to: ['divyambansal2025@u.northwestern.edu'],
       subject: e.target.subject.value,
-      message: e.target.message.value
+      html: <p>e.target.message.value</p>,
     });
+    if (error) {
+      return console.error({ error });
+    }
+  
+    console.log({ data });
+
+    const response = await fetch(endpoint, options);
+    const resData = await response.json();
+
+    if (response.status === 200) {
+      console.log("Message sent.");
+      setEmailSubmitted(true);
+    }
   };
     
   return (
@@ -35,29 +66,67 @@ function EmailSection() {
         
         </div>
         <div>
-            <form className='flex flex-col gap-4 text-black' onSubmit={handleSubmit}>
-            <input type="hidden" name="access_key" value="657eb8b8-2c1b-4c3d-9b10-ff06b10fb5ec" />
-                
-                <label htmlFor="email" className='text-white px-1 mb-1/2'>Email</label>
-                <input type='email' id='email' required className="rounded-full px-3 max-w-96 border border-black" placeholder='tonystark@gmail.com'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                />
-                <label htmlFor='subject' type="subject" className='text-white block mb-1/2 text-sm font-medium mt-4 px-1'>Subject</label>
-                <input type='subject' id='subject' required className="rounded-full px-3 max-w-96 border border-black" placeholder='Voice assistant required.'
-                value={subject} // Add this line
-                onChange={(e) => setSubject(e.target.value)}
-                />
-                <label htmlFor='message' type="message" className='text-white block mb-1/2 text-sm font-medium mt-4 px-1'>Message</label>
-                <textarea name="message" id='message' required className="rounded-3xl px-3 max-w-96 border border-black pt-2 pb-2 min-h-fit" placeholder='Can you help me build Jarvis? ~TS'
-                 value={message} // Add this line
-                 onChange={(e) => setMessage(e.target.value)}/>
-                <div className='button px-0'>
-
-                <button type='submit' className='px-6 py-3 align-self:center bg-gradient-to-br rounded-full mr-4 bg-black border-white hover:bg-white text-white hover:text-[#004c4c] cursor-pointer'>Submit</button>
-                </div>
-            </form>
-        </div>
+        {emailSubmitted ? (
+          <p className="text-green-500 text-sm mt-2">
+            Email sent successfully!
+          </p>
+        ) : (
+          <form className="flex flex-col" onSubmit={handleSubmit}>
+            <div className="mb-6">
+              <label
+                htmlFor="email"
+                className="text-white block mb-2 text-sm font-medium"
+              >
+                Your email
+              </label>
+              <input
+                name="email"
+                type="email"
+                id="email"
+                required
+                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                placeholder="jacob@google.com"
+              />
+            </div>
+            <div className="mb-6">
+              <label
+                htmlFor="subject"
+                className="text-white block text-sm mb-2 font-medium"
+              >
+                Subject
+              </label>
+              <input
+                name="subject"
+                type="text"
+                id="subject"
+                required
+                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                placeholder="Just saying hi"
+              />
+            </div>
+            <div className="mb-6">
+              <label
+                htmlFor="message"
+                className="text-white block text-sm mb-2 font-medium"
+              >
+                Message
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                placeholder="Let's talk about..."
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-black hover:bg-white hover:text-black text-white font-medium py-2.5 px-5 rounded-lg w-full"
+            >
+              Send Message
+            </button>
+          </form>
+        )}
+      </div>
     </section>
   )
 }
