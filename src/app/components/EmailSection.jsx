@@ -5,47 +5,40 @@ import { Resend } from 'resend';
 
 function EmailSection() {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
-    // const data = {
-    //   email: e.target.email.value,
-    //   subject: e.target.subject.value,
-    //   message: e.target.message.value,
-    // };
-    // const JSONdata = JSON.stringify(data);
-    // const endpoint = "/api/send";
+    e.preventDefault();
 
-    // // Form the request for sending data to the server.
-    // const options = {
-    //   // The method is POST because we are sending data.
-    //   method: "POST",
-    //   // Tell the server we're sending JSON.
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   // Body of the request is the JSON data we created above.
-    //   body: JSONdata,
-    // };
-    const resend = new Resend('re_6YW4eRiz_13HyLAQG6Jy9Lrz2matBHvg5');
-    const { data, error } = await resend.emails.send({
-      from: e.target.email.value,
-      to: ['divyambansal2025@u.northwestern.edu'],
-      subject: e.target.subject.value,
-      html: <p>e.target.message.value</p>,
-    });
-    if (error) {
-      return console.error({ error });
-    }
-  
-    console.log({ data });
+    const formData = {
+      email,
+      subject,
+      message,
+    };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    try {
+      const response = await fetch('/api/send/route', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+      if (response.ok) {
+        // Handle successful email submission
+        setEmailSubmitted(true);
+        setEmail('');
+        setSubject('');
+        setMessage('');
+      } else {
+        // Handle errors
+        console.error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('An error occurred while sending the email:', error);
     }
   };
     
@@ -86,6 +79,8 @@ function EmailSection() {
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="jacob@google.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="mb-6">
@@ -102,6 +97,8 @@ function EmailSection() {
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Just saying hi"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
               />
             </div>
             <div className="mb-6">
@@ -116,6 +113,8 @@ function EmailSection() {
                 id="message"
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Let's talk about..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               />
             </div>
             <button
