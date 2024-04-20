@@ -58,7 +58,7 @@ const HeroSection = () => {
               Hello, I&apos;m{" "}
             </span>
             <br></br>
-            <TypeAnimation className="lg:text-7xl sm:text-3xl"
+            <TypeAnimation className="lg:text-7xl sm:text-3xl font-sedan"
               sequence={[
                 "Divyam",
                 1000,
