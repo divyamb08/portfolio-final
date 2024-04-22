@@ -57,7 +57,17 @@ const projectsData = [
       tag: ["All", "Web"],
       gitUrl: "/",
       previewUrl: "https://www.linkedin.com/posts/divyam-bansal_datavisualization-innovation-techprojects-activity-7141003410190888962-hgDt?utm_source=share&utm_medium=member_desktop",
-    }
+    },
+    {
+      id: 7,
+      title: "SMS Spam Classifier",
+      description: "SMS Spam Classifier using Bernoulli Naive Bayes model.",
+      image: "/images/Projects/smsCls.png",
+      tag: ["All", "Data Science & ML"],
+      gitUrl: "https://github.com/divyamb08/SMS-spam-classifier",
+      previewUrl: "https://stapspamminh-95d451a03c8e.herokuapp.com/",
+    },
+
   ];
 
   const ProjectsSection = () => {
