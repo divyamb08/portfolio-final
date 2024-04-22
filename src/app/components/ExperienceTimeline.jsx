@@ -26,7 +26,7 @@ export default function ExperienceTimeline() {
                 <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
             </svg>
         </span>
-        <h3 class="flex items-center mb-1 text-2xl font-semibold text-ivory dark:text-white">Data Intern </h3>
+        <h3 class="flex items-center mb-1 text-2xl font-semibold text-ivory dark:text-white">Data Science Intern </h3>
         <time class="block mb-2 text-2lg  leading-none text-white ">Indian School of Business</time>
         <p class="text-lg text-slate-400">Developed automated scraping scripts in Python extracting over 4 million rows of data using Selenium and BS4; cleaned and
 visualized using popular EDA techniques for effective decision making.</p>
@@ -74,9 +74,9 @@ done in Excel.</p>
                 <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
             </svg>
         </span>
-        <h3 class="flex items-center mb-1 text-2xl font-semibold text-ivory">Summer Intern/Trainee</h3>
+        <h3 class="flex items-center mb-1 text-2xl font-semibold text-ivory">Data Science Intern</h3>
         <time class="block mb-2 text-2lg  leading-none text-white">Marico Limited</time>
-        <p class="text-lg text-slate-400">Developed a customized chatbot for their fmcg products using simple-feed-forward and seq-2-seq model</p>
+        <p class="text-lg text-slate-400">Designed and developed a sophisticated chatbot employing Deep NLP techniques, including sequence-to-sequence and simple feedforward network models. The advanced version of the bot is currently being used to handle 30,000 requests daily.</p>
     </li>
 </ol>
 <br className='mb-70'></br>
