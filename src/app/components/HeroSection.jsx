@@ -88,7 +88,7 @@ const HeroSection = () => {
               Contact
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1ZBMvAREeeXlM7BwB07gP0e9bJUddfj-b/view?usp=sharing"
+              href="https://drive.google.com/file/d/17W-yQp3ZgYTwSCNVqANm4zGD1sfYyEfA/view?usp=sharing"
               className="px-6 py-3 w-full sm:w-fit bg-gradient-to-br rounded-full mr-4 bg-black border-white hover:bg-white text-white hover:text-[#004c4c]"
             >
               Download CV
