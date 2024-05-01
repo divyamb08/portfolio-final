@@ -47,13 +47,13 @@ function EmailSection() {
         <div className=''>
             <h5 className='text-xl font-bold text-white my-2'>Let&apos;s Connect</h5>
             <p className='text-[#ADB7BE] mb-4 max-w-md'>I am currently looking for new opportunities. Whether you have a question or just want to have a coffee chat, my inbox is always open. </p>
-            <p className='pb-5'>P.S. I love telling and listening to stories <span role="img" aria-label="smiley">😊</span></p>
+            <p className='pb-5 text-white'>P.S. I love telling and listening to stories <span role="img" aria-label="smiley">😊</span></p>
         <div className='socials flex flex-row gap-2'>
         <a href="https://linkedin.com/in/divyam-bansal" target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
-                    <FaLinkedin alt="LinkedIn" className="h-10 w-10"/>
+                    <FaLinkedin alt="LinkedIn" className="h-10 w-10 invert-0" style={{filter:"invert(1)"}}/>
                 </a>
                 <a href="https://github.com/divyamb08" target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
-                    <FaGithub alt="GitHub" className="h-10 w-10"/>
+                    <FaGithub alt="GitHub" className="h-10 w-10" style={{filter:"invert(1)"}}/>
                 </a>
         </div>
         
