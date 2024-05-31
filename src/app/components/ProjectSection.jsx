@@ -55,8 +55,8 @@ const projectsData = [
       description: "An LLM model to query in-house documents at scale for organizations",
       image: "/images/Projects/DocMgr.png",
       tag: ["All", "Web"],
-      gitUrl: "/",
-      previewUrl: "https://www.linkedin.com/posts/divyam-bansal_datavisualization-innovation-techprojects-activity-7141003410190888962-hgDt?utm_source=share&utm_medium=member_desktop",
+      gitUrl: "https://github.com/divyamb08/DS-finals",
+      previewUrl: "https://docmgr-3016d9372af7.herokuapp.com/",
     },
     {
       id: 7,

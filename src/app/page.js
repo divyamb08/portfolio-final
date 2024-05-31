@@ -18,10 +18,10 @@ export default function Home() {
         <SpeedInsights />
         <Analytics />
         <HeroSection />
+        <ProjectSection />
         {/* <AchievementsSection /> */}
         <AboutSection />
         <ExperienceTimeline/>
-        <ProjectSection />
         <EmailSection />
       </div>
       <Footer />
