@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ExperienceTimeline from "./components/ExperienceTimeline";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import ScrollToTopButton from "./components/ScrollToTopButton";
 // import AchievementsSection from "./components/AchievementsSection";
 
 
@@ -25,6 +26,7 @@ export default function Home() {
         <EmailSection />
       </div>
       <Footer />
+      <ScrollToTopButton />
     </main>
   );
 }

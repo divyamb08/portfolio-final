@@ -43,13 +43,46 @@ const TAB_DATA = [
     id: "dsskills",
     content: (
       <ul className="list-disc pl-2 mb-10">
-        <li>SQL</li>
-        <li>Pandas</li>
-        <li>NumPy</li>
-        <li>Matplotlib</li>
-        <li>Seaborn</li>
-        <li>EDA</li>
-        <li>Scikit-learn</li>
+        <li>Languages
+          <ul className="sub-bullet">
+            <li>Python</li>
+            <li>SQL</li>
+          </ul>
+        </li>
+        <li>Web Scraping
+          <ul className="sub-bullet">
+            <li>Selenium</li>
+            <li>Scrapy</li>
+            <li>Beautiful Soup</li>
+          </ul>
+        </li>
+        <li>Preprocessing
+          <ul className="sub-bullet">
+            <li>Standardization/Normalization</li>
+            <li>KNN Imputer/ Simple Imputer</li>
+          </ul>
+        </li>
+        <li>Exploratory Data Analysis
+          <ul className="sub-bullet">
+            <li>Seaborn & Matplotlib</li>
+            <li>Pandas Profiling</li>
+            <li>Statsmodels</li>
+          </ul>
+        </li>
+        <li>Feature Engineering
+          <ul className="sub-bullet">
+            <li>One hot encoding/ Ordinal Encoding</li>
+          </ul>
+        </li>
+        <li>Algorithms
+          <ul className="sub-bullet">
+            <li>Linear Regression</li>
+            <li>Logistic Regression</li>
+            <li>Clustering</li>
+            <li>Random Forest</li>
+            <li>XGBoost</li>
+          </ul>
+        </li>
       </ul>
     ),
   },

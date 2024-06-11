@@ -117,9 +117,6 @@ const projectsData = [
           </motion.li>
         ))}
       </ul>
-      {/* <div className="grid md:grid-cols-3 gap-8 md:gap-12 sm:grid-cols-2 sm:gap-8">
-        {filteredProjects.map((project) => (<ProjectCards key={project.id} title={project.title} description={project.description} imgUrl={project.image} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />))}
-      </div> */}
       </section>
     );
   };
