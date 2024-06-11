@@ -3,6 +3,7 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import Link from "next/link";
+import './AboutSection.css';
 
 const TAB_DATA = [
   {
@@ -10,13 +11,29 @@ const TAB_DATA = [
     id: "sdeskills",
     content: (
       <ul className="list-disc pl-2 mb-10">
-        <li>Python</li>
-        <li>Django</li>
-        <li>JavaScript/Typescript</li>
-        <li>Node.js</li>
-        <li>Next.js</li>
-        <li>React</li>
-        <li>Containerization</li>
+        <li>Development Languages
+          <ul className="sub-bullet">
+            <li>Python</li>
+            <li>C++</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+          </ul>
+        </li>
+        <li>Development Frameworks
+          <ul className="sub-bullet">
+            <li>Django</li>
+            <li>NodeJS</li>
+            <li>NextJS</li>
+          </ul>
+        </li>
+        <li>Development Libraries
+          <ul className="sub-bullet">
+            <li>React</li>
+            <li>React Native</li>
+            <li>Tailwind CSS</li>
+          </ul>
+        </li>
+        <li>Docker Containerization</li>
         <li>AWS cloud infrastructure</li>
       </ul>
     ),

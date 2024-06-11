@@ -54,19 +54,17 @@ const HeroSection = () => {
         >
           <div className="">
           <h1 className="text-white mb-4 text-4xl sm:text-3xl lg:text-7xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#FF5858] via-red-700 to-[#FFFF45]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#009FC2] to-[#0D0A0B]">
               Hello, I&apos;m{" "}
             </span>
             <br></br>
             <TypeAnimation className="lg:text-7xl sm:text-3xl font-sedan"
               sequence={[
-                "Divyam",
+                "Divyam Bansal",
                 1000,
-                "a Software Developer",
+                "a Software Engineer",
                 1000,
                 "a Data Scientist",
-                1000,
-                "an ML Engineer",
                 1000,
               ]}
               wrapper="span"
@@ -89,7 +87,7 @@ const HeroSection = () => {
             </Link>
             <Link
               href="https://drive.google.com/file/d/17W-yQp3ZgYTwSCNVqANm4zGD1sfYyEfA/view?usp=sharing"
-              className="px-6 py-3 w-full sm:w-fit bg-gradient-to-br rounded-full mr-4 bg-black border-white hover:bg-white text-white hover:text-[#004c4c]"
+              className="px-6 py-3 w-full sm:w-fit rounded-full bg-gradient-to-tr from-[#009FC2] to-[#0D0A0B] text-white hover:from-white hover:to-slate-200 hover:text-[#130f3c]"
             >
               Download CV
             </Link>

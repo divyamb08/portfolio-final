@@ -1,6 +1,6 @@
 "use client"
 import React,  { useState, useEffect } from 'react'
-import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { Resend } from 'resend';
 
 function EmailSection() {
@@ -50,10 +50,10 @@ function EmailSection() {
             <p className='pb-5 text-white'>P.S. I love telling and listening to stories <span role="img" aria-label="smiley">😊</span></p>
         <div className='socials flex flex-row gap-2'>
         <a href="https://linkedin.com/in/divyam-bansal" target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
-                    <FaLinkedin alt="LinkedIn" className="h-10 w-10 invert-0" style={{filter:"invert(1)"}}/>
+                    <FaLinkedin alt="LinkedIn" className="h-10 w-10 invert-0"/>
                 </a>
                 <a href="https://github.com/divyamb08" target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
-                    <FaGithub alt="GitHub" className="h-10 w-10" style={{filter:"invert(1)"}}/>
+                    <FaGithub alt="GitHub" className="h-10 w-10"/>
                 </a>
         </div>
         
@@ -78,7 +78,7 @@ function EmailSection() {
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
+                placeholder="tony.stark@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -96,7 +96,7 @@ function EmailSection() {
                 id="subject"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
+                placeholder="We have a mission"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
               />
@@ -112,14 +112,14 @@ function EmailSection() {
                 name="message"
                 id="message"
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
+                placeholder="Let's save the planet using code."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>
             <button
               type="submit"
-              className="bg-black hover:bg-white hover:text-black text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              className="bg-white hover:bg-slate-400 text-black font-medium py-2.5 px-5 rounded-lg w-full"
             >
               Send Message
             </button>

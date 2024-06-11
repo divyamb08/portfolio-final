@@ -12,8 +12,8 @@ import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#004c4c]">
-      <Navbar />
+    <main className="flex min-h-screen flex-col bg-[#0F0F0F]">
+      {/* <Navbar /> */}
       <div className="container min-h-screen mt-24 mx-auto px-12 py-4">
         <SpeedInsights />
         <Analytics />
