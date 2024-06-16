@@ -67,6 +67,25 @@ const projectsData = [
       gitUrl: "https://github.com/divyamb08/SMS-spam-classifier",
       previewUrl: "https://stapspamminh-95d451a03c8e.herokuapp.com/",
     },
+    {
+      id: 8,
+      title: "GraphQL Recipe App",
+      description: "A recipe application built using Django and GraphQL for the backend and React for the frontend.",
+      image: "/images/Projects/graphql.png",
+      tag: ["All", "Web"],
+      gitUrl: "https://github.com/divyamb08/graphql-recipeapp",
+      previewUrl: "",
+    },
+    {
+      id: 9,
+      title: "Dough Divider",
+      description: "Dough Divider is a full-stack application for managing and tracking group transactions, built with React, Apollo Client, and Django.",
+      image: "/images/Projects/doughy.png",
+      tag: ["All", "Web"],
+      gitUrl: "https://github.com/divyamb08/doughy",
+      previewUrl: "",
+    },
+    
 
   ];
 
