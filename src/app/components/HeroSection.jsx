@@ -53,7 +53,7 @@ const HeroSection = () => {
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <div className="">
-          <h1 className="text-white mb-4 text-4xl sm:text-3xl lg:text-7xl lg:leading-normal font-extrabold">
+          <h1 className="text-white mb-4 text-4xl sm:text-3xl lg:text-7xl lg:leading-normal font-extrabold" style={{ minHeight: '8rem' }}>
             <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#009FC2] to-[#0D0A0B]">
               Hello, I&apos;m{" "}
             </span>
