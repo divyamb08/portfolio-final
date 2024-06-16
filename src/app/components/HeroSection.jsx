@@ -39,7 +39,7 @@ const HeroSection = () => {
   if (screenSize.isLargeScreen) {
     style.marginTop = '-250px';
   } else if (screenSize.isSmallScreen) {
-    style.marginTop = '-100px';
+    style.marginTop = '-300px'; // Adjusted from '-100px'
     buttonStyle.marginTop = '10px';
   }
   return (
