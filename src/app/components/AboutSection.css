@@ -2,3 +2,18 @@
     list-style-type: circle;
     margin-left: 20px; /* Adjust as needed for indentation */
   }
+
+.container {
+  position: relative; /* Add this to the container */
+}
+
+.image-container {
+  position: absolute; /* Add this to the image container */
+  top: 0;
+  left: 0;
+  width: 50%; /* Adjust the width as needed */
+}
+
+.text-container {
+  margin-left: 50%; /* Adjust the margin as needed */
+}

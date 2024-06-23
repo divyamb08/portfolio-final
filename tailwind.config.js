@@ -14,15 +14,19 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        'sedan': ['Sedan', 'serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       }
     },
     colors: {
       ...colors,
       primary: colors.purple,
       secondary: colors.pink,
+      sky: colors.sky, // Updated from lightBlue
+      stone: colors.stone, // Updated from warmGray
+      neutral: colors.neutral, // Updated from trueGray
+      gray: colors.gray, // Updated from coolGray
+      slate: colors.slate, // Updated from blueGray
     },
-    
   },
   plugins: [],
 };
