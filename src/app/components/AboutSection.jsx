@@ -123,6 +123,7 @@ const TAB_DATA = [
 const AboutSection = () => {
   const [tab, setTab] = useState("sdeskills");
   const [isPending, startTransition] = useTransition();
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -130,43 +131,53 @@ const AboutSection = () => {
     });
   };
 
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <section className="text-white" id="about">
       <div className="container md:grid md:grid-cols-2 gap-8 items-center px-6 py-8 xl:gap-10 sm:py-16">
-        <Image src="/images/about.png" alt="about-img" width={500} height={500} className="place-self-start"/>
+        <Image src="/images/about.png" alt="about-img" width={500} height={500} className="hidden md:block place-self-start"/>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          Hello! I&apos;m Divyam Bansal, a software developer and data scientist driven by my passion for unraveling the complexities of real-world challenges. My journey in tech has been fueled by curiosity and the desire to make impactful contributions. Working within dynamic teams, I&apos;ve found my true calling—leveraging collaborative strengths to innovate and solve problems at scale. My toolkit is a blend of coding prowess and analytical insight, enabling me to turn data into decisions and ideas into reality. Welcome to my portfolio, where each project is a testament to my dedication to excellence and my journey in making a difference.
+            {isExpanded ? (
+              <>
+                Hello! I&apos;m Divyam Bansal, a software developer and data scientist driven by my passion for unraveling the complexities of real-world challenges. My journey in tech has been fueled by curiosity and the desire to make impactful contributions. Working within dynamic teams, I&apos;ve found my true calling—leveraging collaborative strengths to innovate and solve problems at scale. My toolkit is a blend of coding prowess and analytical insight, enabling me to turn data into decisions and ideas into reality. Welcome to my portfolio, where each project is a testament to my dedication to excellence and my journey in making a difference.
+                <button onClick={toggleExpand} className="text-blue-500 ml-2 text-sm underline">See Less</button>
+              </>
+            ) : (
+              <>
+                Hello! I&apos;m Divyam Bansal, a software developer and data scientist driven by my passion for unraveling the complexities of real-world challenges. My journey in tech has been fueled by curiosity and the desire to make impactful contributions...
+                <button onClick={toggleExpand} className="text-blue-500 ml-2 text-sm underline">See More</button>
+              </>
+            )}
           </p>
           <div className="flex flex-col sm:flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("sdeskills")}
               active={tab === "sdeskills"}
             >
-              {" "}
-              Software Development Skills{" "}
+              Software Development Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("dsskills")}
               active={tab === "dsskills"}
             >
-              {" "}
-              Data Science Skills{" "}
+              Data Science Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
-              {" "}
-              Education{" "}
+              Education
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
-              {" "}
-              Certifications{" "}
+              Certifications
             </TabButton>
           </div>
           <div className="mt-8">

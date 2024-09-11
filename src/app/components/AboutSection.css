@@ -17,3 +17,13 @@
 .text-container {
   margin-left: 50%; /* Adjust the margin as needed */
 }
+
+.expandable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.expandable.expanded {
+  max-height: 1000px; /* Adjust as needed */
+}
