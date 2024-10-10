@@ -85,6 +85,15 @@ const projectsData = [
       gitUrl: "https://github.com/divyamb08/doughy",
       previewUrl: "",
     },
+    {
+      id: 8,
+      title: "The Pokemon Repo",
+      description: "A pokemon repository showcasing all the pokemons and their strength, skill, and power moves",
+      image: "/images/Projects/Pokemon.png",
+      tag: ["All", "Web"],
+      gitUrl: "https://github.com/divyamb08/poke-api",
+      previewUrl: "https://poke-api-phi-five.vercel.app/",
+    },
     
 
   ];
