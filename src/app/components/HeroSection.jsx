@@ -43,8 +43,7 @@ const HeroSection = () => {
     buttonStyle.marginTop = '10px';
   }
   return (
-    
-    <section className="flex h-screen align-middle justify-center items-center lg:py-16">
+    <header className="flex h-screen align-middle justify-center items-center lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12 h-full items-center" style={style}>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -57,8 +56,9 @@ const HeroSection = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#009FC2] to-[#0D0A0B]">
               Hello, I&apos;m{" "}
             </span>
-            <br></br>
-            <TypeAnimation className="lg:text-7xl sm:text-3xl font-sedan"
+            <br />
+            <TypeAnimation
+              className="lg:text-7xl sm:text-3xl font-sedan"
               sequence={[
                 "Divyam Bansal",
                 1000,
@@ -101,16 +101,18 @@ const HeroSection = () => {
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative sm:-mt-50">
             <Image
-              src="/images/Profile-pic.png"
-              alt="hero image"
+              src="/images/optimized-image.jpg"
+              alt="Description of image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={400}
-              height={400}
+              width={800}
+              height={600}
+              quality={75}
+              priority
             />
           </div>
         </motion.div>
       </div>
-    </section>
+    </header>
   );
 };
 
