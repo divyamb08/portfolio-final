@@ -140,7 +140,12 @@ const AboutSection = () => {
       <div className="container md:grid md:grid-cols-2 gap-8 items-center px-6 py-8 xl:gap-10 sm:py-16">
         <Image src="/images/about.png" alt="about-img" width={500} height={500} className="hidden md:block place-self-start"/>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h1 className="text-4xl font-bold text-white mb-4">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-purple-400">
+              About Me
+            </span>
+          </h1>
+          <div className="w-20 h-1 bg-indigo-500 mb-4 rounded-full"></div>
           <p className="text-base lg:text-lg">
             {isExpanded ? (
               <>

@@ -23,7 +23,7 @@ export default function Home() {
           content="Welcome to the portfolio of Divyam Bansal, a Software Engineer and Data Scientist specializing in web development and data analysis."
         />
       </Head>
-      <main className="flex min-h-screen flex-col bg-[#0F0F0F]">
+      <main className="flex min-h-screen flex-col">
         {/* <Navbar /> */}
         <div className="container min-h-screen mt-24 mx-auto px-12 py-4">
           <SpeedInsights />

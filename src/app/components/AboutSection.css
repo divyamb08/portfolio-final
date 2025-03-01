@@ -1,7 +1,7 @@
 .sub-bullet {
     list-style-type: circle;
     margin-left: 20px; /* Adjust as needed for indentation */
-  }
+}
 
 .container {
   position: relative; /* Add this to the container */
@@ -21,9 +21,44 @@
 .expandable {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
 }
 
 .expandable.expanded {
   max-height: 1000px; /* Adjust as needed */
+  opacity: 1;
+}
+
+/* Timeline styling */
+.timeline-connector {
+  position: absolute;
+  left: -5px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.5), rgba(79, 70, 229, 0.2));
+  transform: translateX(-50%);
+}
+
+.timeline-list-item {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-list-item:hover {
+  transform: translateX(5px);
+}
+
+/* Glowing dot effect */
+.timeline-list-item::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(99, 102, 241, 0.7);
+  border-radius: 50%;
+  left: -20px;
+  top: 8px;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.7);
 }

@@ -53,7 +53,7 @@ const HeroSection = () => {
         >
           <div className="">
           <h1 className="text-white mb-4 text-4xl sm:text-3xl lg:text-7xl lg:leading-normal font-extrabold" style={{ minHeight: '8rem' }}>
-            <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#009FC2] to-[#0D0A0B]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-400">
               Hello, I&apos;m{" "}
             </span>
             <br />
@@ -87,7 +87,7 @@ const HeroSection = () => {
             </Link>
             <Link
               href="https://drive.google.com/file/d/17W-yQp3ZgYTwSCNVqANm4zGD1sfYyEfA/view?usp=sharing"
-              className="px-6 py-3 w-full sm:w-fit rounded-full bg-gradient-to-tr from-[#009FC2] to-[#0D0A0B] text-white hover:from-white hover:to-slate-200 hover:text-[#130f3c]"
+              className="px-6 py-3 w-full sm:w-fit rounded-full bg-gradient-to-r from-indigo-300 to-purple-400 text-white hover:from-white hover:to-slate-200 hover:text-[#130f3c]"
             >
               Download CV
             </Link>

@@ -45,7 +45,12 @@ function EmailSection() {
   return (
     <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4' id="contact">
         <div className=''>
-            <h5 className='text-xl font-bold text-white my-2'>Let&apos;s Connect</h5>
+            <h1 className='text-4xl sm:text-5xl font-bold text-white mb-4'>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-purple-400">
+                Let&apos;s Connect
+              </span>
+            </h1>
+            <div className="w-20 h-1 bg-indigo-500 mb-4 rounded-full"></div>
             <p className='text-[#ADB7BE] mb-4 max-w-md'>I am currently looking for new opportunities. Whether you have a question or just want to have a coffee chat, my inbox is always open. </p>
             <p className='pb-5 text-white'>P.S. I love telling and listening to stories <span role="img" aria-label="smiley">😊</span></p>
         <div className='socials flex flex-row gap-2'>

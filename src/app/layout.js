@@ -1,7 +1,13 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Raleway } from 'next/font/google'
+import BackgroundAnimation from './components/BackgroundAnimation.jsx'
 
-const inter = Inter({ subsets: ['latin'] })
+const raleway = Raleway({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-raleway',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+})
 
 export const metadata = {
   title: "Divyam Bansal - Software Engineer and Data Scientist",
@@ -53,7 +59,10 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${raleway.className} ${raleway.variable}`}>
+        <BackgroundAnimation />
+        {children}
+      </body>
     </html>
   )
 }

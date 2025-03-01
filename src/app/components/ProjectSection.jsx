@@ -117,9 +117,14 @@ const projectsData = [
 
     return (
         <section id="projects">
-      <h2 className='text-center text-4xl font-bold text-white mt-30 mb-2 sm:pt-20'>
-        My Projects
-      </h2>
+      <div className='mb-8'>
+        <h1 className='text-center text-4xl sm:text-5xl font-bold text-white'>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-purple-400">
+            My Projects
+          </span>
+        </h1>
+        <div className="w-20 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+      </div>
       <div className='text-white flex flex-col sm:flex-row justify-center items-center gap-2 py-6'>
         <ProjectTag onClick={handleTabChange} name="All" isSelected={tag === "All"} />
         <ProjectTag onClick={handleTabChange} name="Web" isSelected={tag === "Web"} />
