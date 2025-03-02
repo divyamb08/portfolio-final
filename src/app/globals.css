@@ -31,4 +31,39 @@ body {
   top: 20px;
   right: 20px;
   gap: 15px;
+  z-index: 50;
+}
+
+/* Hover glow effect for buttons */
+.hover\:shadow-glow:hover {
+  box-shadow: 0 0 25px rgba(123, 104, 238, 0.6), 0 0 10px rgba(123, 104, 238, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121225;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.5), rgba(168, 85, 247, 0.5));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, rgba(99, 102, 241, 0.8), rgba(168, 85, 247, 0.8));
+}
+
+/* Image hover effects */
+.image-glow {
+  filter: drop-shadow(0 0 8px rgba(123, 104, 238, 0.4));
+  transition: filter 0.3s ease;
+}
+
+.image-glow:hover {
+  filter: drop-shadow(0 0 15px rgba(123, 104, 238, 0.6));
 }
